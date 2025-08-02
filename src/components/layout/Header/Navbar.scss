@@ -1,0 +1,35 @@
+@use '@/styles/base/colors' as *;
+@use '@/styles/base/typography' as *;
+@use '@/styles/base/mixins' as *;
+
+.navbar-wrapper {
+  background-color: get-color(surface-default);
+  box-shadow: 0 4px 8px get-color(shadow-default);
+  padding: 1rem 0;
+
+  .navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @include flex-center;
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+
+      a {
+        font-family: get-type(body, font-family); // ✅ proper usage
+        font-size: get-type(body, font-size);
+        color: get-color(text-dark);
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: get-color(brand-accent);
+        }
+      }
+    }
+  }
+}

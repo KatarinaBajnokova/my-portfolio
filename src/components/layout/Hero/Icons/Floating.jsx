@@ -11,7 +11,7 @@ import {
 } from 'react-icons/si';
 import { TbBrandMantine } from 'react-icons/tb';
 
-import './FloatingIcons.scss';
+import './Floating.scss';
 
 export default function FloatingIcons() {
   const icons = [
