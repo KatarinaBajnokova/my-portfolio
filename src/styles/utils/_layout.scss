@@ -1,0 +1,57 @@
+@use '../tokens/spacing' as *;
+@use '../base/spacing' as *;
+
+// STACK – vertical layout
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: get-space(md); // default vertical spacing
+
+  &--sm {
+    gap: get-space(sm);
+  }
+  &--lg {
+    gap: get-space(lg);
+  }
+  &--responsive {
+    gap: get-space(responsive-sm);
+  }
+}
+
+// CLUSTER – horizontal wrap layout for tags, chips, icons
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: get-space(sm); // default spacing between items
+
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--spread {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--responsive {
+    gap: get-space(responsive-sm);
+  }
+}
+
+// SECTION – outer spacing
+.section {
+  padding-block: get-space(xl);
+  padding-inline: get-space(md);
+
+  &--tight {
+    padding-block: get-space(md);
+  }
+  &--wide {
+    padding-block: get-space(xxl);
+  }
+  &--responsive {
+    padding-block: get-space(responsive-md);
+    padding-inline: get-space(responsive-sm);
+  }
+}

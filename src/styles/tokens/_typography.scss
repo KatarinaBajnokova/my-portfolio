@@ -1,0 +1,46 @@
+@use './typography-primitives' as *;
+
+$typography-tokens: (
+  display: (
+    font-size: clamp(2rem, 6vw, 2.75rem),
+    line-height: $line-height-tight,
+    font-weight: $font-weight-bold,
+    font-family: $font-family-heading,
+    letter-spacing: $letter-spacing-tight,
+  ),
+  headline: (
+    font-size: clamp(1.5rem, 4vw, 2rem),
+    line-height: $line-height-normal,
+    font-weight: $font-weight-semibold,
+    font-family: $font-family-heading,
+    letter-spacing: $letter-spacing-normal,
+  ),
+  title: (
+    font-size: clamp(1.25rem, 3vw, 1.5rem),
+    line-height: $line-height-normal,
+    font-weight: $font-weight-semibold,
+    font-family: $font-family-heading,
+    letter-spacing: $letter-spacing-normal,
+  ),
+  body: (
+    font-size: clamp(1rem, 2vw, 1.125rem),
+    line-height: $line-height-loose,
+    font-weight: $font-weight-regular,
+    font-family: $font-family-body,
+    letter-spacing: $letter-spacing-normal,
+  ),
+  caption: (
+    font-size: $font-size-sm,
+    line-height: $line-height-normal,
+    font-weight: $font-weight-light,
+    font-family: $font-family-body,
+    letter-spacing: $letter-spacing-wide,
+  ),
+  label: (
+    font-size: $font-size-xs,
+    line-height: $line-height-normal,
+    font-weight: $font-weight-regular,
+    font-family: $font-family-body,
+    letter-spacing: $letter-spacing-normal,
+  ),
+);

@@ -1,0 +1,13 @@
+@use '../tokens/typography' as *;
+
+@function get-type($key, $property) {
+  @return map-get(map-get($typography-tokens, $key), $property);
+}
+
+@mixin apply-typography($key) {
+  font-family: get-type($key, font-family);
+  font-size: get-type($key, font-size);
+  font-weight: get-type($key, font-weight);
+  line-height: get-type($key, line-height);
+  letter-spacing: get-type($key, letter-spacing);
+}

@@ -1,0 +1,43 @@
+$theme-colors: (
+  brand-primary: #f7bfc8,
+  brand-accent: #c38b8b,
+  brand-highlight: #f58484,
+
+  surface-default: #fff2e9,
+  surface-muted: #e9e0dc,
+  surface-paper: #f8ecd7,
+  surface-parchment: #f6f1e7,
+
+  text-dark: #4e3c3c,
+  text-light: #ffffff,
+  text-ink: #3b2f2f,
+  text-label: #a3876c,
+
+  border-default: #d6c2c2,
+  border-chapter: #e5d8c5,
+
+  state-info: #b8dff2,
+  state-success: #a3dfba,
+  state-warning: #ffdc96,
+  state-error: #ef8888,
+
+  button-hover: darken(#f7bfc8, 5%),
+  button-active: lighten(#c38b8b, 5%),
+  link-hover: #c38b8b,
+  focus-ring: rgba(#f7bfc8, 0.5),
+  shadow-default: rgba(0, 0, 0, 0.12),
+  backdrop: rgba(0, 0, 0, 0.4),
+  glass-blur: rgba(255, 255, 255, 0.15),
+  skeleton-bg: #e9e0dc,
+  skeleton-shine: lighten(#e9e0dc, 10%),
+  gray-100: #f9f9f9,
+  gray-300: #e0e0e0,
+  gray-600: #777777,
+  gray-900: #1a1a1a,
+
+  chart-1: #f67280,
+  chart-2: #6c5ce7,
+  chart-3: #00b894,
+  chart-4: #fdcb6e,
+  chart-5: #0984e3,
+);

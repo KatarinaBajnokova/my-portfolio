@@ -1,0 +1,28 @@
+// BASE SPACING SCALE (px-based, converted to rem)
+$space-xxs: 0.25rem; // 4px
+$space-xs: 0.5rem; // 8px
+$space-sm: 0.75rem; // 12px
+$space-md: 1rem; // 16px
+$space-lg: 1.5rem; // 24px
+$space-xl: 2rem; // 32px
+$space-xxl: 3rem; // 48px
+
+// RESPONSIVE CLAMPED SPACING (advanced)
+$space-responsive-sm: clamp(0.5rem, 2vw, 1rem);
+$space-responsive-md: clamp(1rem, 4vw, 2rem);
+$space-responsive-lg: clamp(2rem, 6vw, 4rem);
+
+// LAYOUT SEMANTICS (can be aliased if needed)
+$spacing-tokens: (
+  xxs: $space-xxs,
+  xs: $space-xs,
+  sm: $space-sm,
+  md: $space-md,
+  lg: $space-lg,
+  xl: $space-xl,
+  xxl: $space-xxl,
+
+  responsive-sm: $space-responsive-sm,
+  responsive-md: $space-responsive-md,
+  responsive-lg: $space-responsive-lg,
+);

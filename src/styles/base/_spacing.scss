@@ -1,0 +1,9 @@
+@use '../tokens/spacing' as *;
+
+@function get-space($key) {
+  @return map-get($spacing-tokens, $key);
+}
+
+@mixin apply-spacing($property, $size) {
+  #{$property}: get-space($size);
+}

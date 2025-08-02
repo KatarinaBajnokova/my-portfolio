@@ -1,0 +1,50 @@
+.footer-wrapper {
+  background-color: get-color(surface-muted);
+  padding: $spacing-xl $spacing-md;
+  text-align: center;
+  color: get-color(text-dark);
+  border-top: 1px solid get-color(border-default);
+  box-shadow: 0 -4px 6px get-color(shadow-default);
+  @include apply-typography(caption);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.footer-text {
+  margin: 0;
+
+  .heart {
+    display: inline-block;
+    animation: pulse-heart 2s infinite;
+  }
+}
+
+@keyframes pulse-heart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer-socials {
+  margin-top: $spacing-sm;
+
+  a {
+    margin-inline: $spacing-xs;
+    color: get-color(text-dark);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: get-color(brand-accent);
+    }
+  }
+}

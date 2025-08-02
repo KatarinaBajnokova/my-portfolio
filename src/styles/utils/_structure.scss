@@ -1,0 +1,48 @@
+@use '../tokens/spacing' as *;
+
+// WRAPPER – for max-width containment and horizontal padding
+.wrapper {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: get-space(md);
+  max-width: 1200px;
+
+  &--narrow {
+    max-width: 768px;
+  }
+  &--wide {
+    max-width: 1440px;
+  }
+  &--full {
+    max-width: none;
+  }
+}
+
+// GRID – responsive flexible columns
+.grid {
+  display: grid;
+  gap: get-space(md);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  &--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &--auto {
+    grid-template-columns: auto auto;
+  }
+
+  &--responsive {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  &--centered {
+    justify-content: center;
+    align-items: center;
+  }
+}
