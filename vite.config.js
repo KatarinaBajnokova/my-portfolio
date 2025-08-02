@@ -16,15 +16,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
-        @use "@styles/tokens/typography-primitives" as *;
-        @use "@styles/base/colors" as *;
-        @use "@styles/base/typography" as *;
-        @use "@styles/base/mixins" as *;
-        @use "@styles/base/spacing" as *;
-        @use "@styles/utils/layout" as *;
-        @use "@styles/utils/structure" as *;
-        `,
+        additionalData: `@use "@styles/index" as *;`,
       },
     },
   },

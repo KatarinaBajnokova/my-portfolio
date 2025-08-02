@@ -1,5 +1,12 @@
+@use 'sass:map';
 @use '../tokens/themes' as *;
 
+// ❌ DO NOT forward './colors' here – it's causing a loop!
+
 @function get-color($key) {
-  @return map-get($theme-colors, $key);
+  @if map.has-key($theme-colors, $key) {
+    @return map.get($theme-colors, $key);
+  } @else {
+    @error "Theme color `#{$key}` not found in $theme-colors.";
+  }
 }

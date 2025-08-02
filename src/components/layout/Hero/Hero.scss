@@ -3,11 +3,7 @@
   display: flex;
   justify-content: center;
   padding: 6rem 1.5rem;
-  background: linear-gradient(
-    180deg,
-    get-color(surface-default) 0%,
-    get-color(surface-muted) 100%
-  );
+  background: linear-gradient(180deg, get-color(surface-default) 0%, get-color(surface-muted) 100%);
   overflow: hidden;
 }
 
@@ -42,7 +38,8 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  background-color: rgba(get-color(surface-muted), 0.95);
+  background-color: mix(get-color(surface-muted), transparent, 5%);
+
   border-radius: 1rem;
   box-shadow: 0 4px 12px get-color(shadow-default);
   padding: 2rem;
@@ -135,7 +132,7 @@
         .highlighted-name {
           color: get-color(text-dark);
           margin-left: 0.3rem;
-          font-weight: bold;
+          font-weight: $font-weight-bold;
           animation-delay: 1s;
         }
       }
