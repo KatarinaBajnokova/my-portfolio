@@ -1,0 +1,123 @@
+.floating-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+
+  .floating-icon {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(148, 0, 74, 0.4); // deep rose pink
+    opacity: 0.7;
+    animation-name: float;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  // Faster animations (8–12s) and keep staggering
+  .icon-1 {
+    top: 5%;
+    left: 5%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+  }
+  .icon-2 {
+    top: 15%;
+    right: 10%;
+    animation-duration: 9s;
+    animation-delay: 1.2s;
+  }
+  .icon-3 {
+    bottom: 5%;
+    left: 25%;
+    animation-duration: 11s;
+    animation-delay: 2s;
+  }
+  .icon-4 {
+    bottom: 45%;
+    right: 10%;
+    animation-duration: 10s;
+    animation-delay: 0.8s;
+  }
+  .icon-5 {
+    top: 5%;
+    left: 25%;
+    animation-duration: 12s;
+    animation-delay: 1.5s;
+  }
+  .icon-6 {
+    top: 5%;
+    right: 45%;
+    animation-duration: 11s;
+    animation-delay: 2.3s;
+  }
+  .icon-7 {
+    bottom: 5%;
+    left: 45%;
+    animation-duration: 10s;
+    animation-delay: 0.5s;
+  }
+  .icon-8 {
+    top: 5%;
+    left: 95%;
+    animation-duration: 12s;
+    animation-delay: 1s;
+  }
+  .icon-9 {
+    bottom: 5%;
+    right: 35%;
+    animation-duration: 8s;
+    animation-delay: 0.7s;
+  }
+  .icon-10 {
+    top: 30%;
+    left: 5%;
+    animation-duration: 11s;
+    animation-delay: 1.3s;
+  }
+  .icon-11 {
+    bottom: 5%;
+    right: 15%;
+    animation-duration: 10s;
+    animation-delay: 2.1s;
+  }
+  .icon-12 {
+    top: 55%;
+    left: 10%;
+    animation-duration: 9s;
+    animation-delay: 0.6s;
+  }
+  .icon-13 {
+    bottom: 5%;
+    left: 5%;
+    animation-duration: 11s;
+    animation-delay: 2s;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(40px, -40px) scale(1.1) rotate(10deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-40px, 40px) scale(1.15) rotate(-10deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(25px, -25px) scale(1.1) rotate(5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+}
