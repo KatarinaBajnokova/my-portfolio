@@ -1,0 +1,29 @@
+.modal-image-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+
+  .modal-image {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &.image-small {
+      max-width: 120px;
+    }
+
+    &.image-medium {
+      max-width: 200px;
+    }
+
+    &.image-large {
+      max-width: 100%;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}

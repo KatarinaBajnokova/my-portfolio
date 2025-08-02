@@ -1,0 +1,60 @@
+@use '@/styles/base/colors' as *;
+@use '@/styles/base/typography' as *;
+
+.tabbed-viewer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  .tab-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      background-color: get-color(surface-paper);
+      border: 1px solid get-color(border-default);
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: get-type(body, font-family);
+      font-weight: get-type(body, font-weight);
+      transition: background-color 0.2s ease;
+
+      &.active {
+        background-color: get-color(surface-muted);
+        border-color: get-color(border-default);
+      }
+
+      &:hover {
+        background-color: get-color(surface-default);
+      }
+    }
+  }
+
+  .tab-content {
+    border-radius: 8px;
+    background: get-color(surface-default);
+    padding: 1rem;
+    max-height: 500px;
+    overflow: auto;
+
+    .tab-video {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px get-color(shadow-default);
+    }
+
+    .tab-code {
+      background-color: get-color(gray-900);
+      color: get-color(gray-100);
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-family: 'Courier New', monospace;
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
+  }
+}

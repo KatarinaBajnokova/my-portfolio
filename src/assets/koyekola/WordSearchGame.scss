@@ -1,0 +1,147 @@
+@use "@/styles/styles" as *;
+
+.wordsearch-game {
+  padding: 2rem;
+  background-color: $bg-base;
+  color: $text-primary;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+
+  h1.h1 {
+    color: $brand-primary-dark;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .word-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+
+    .word-row {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .word-cell {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: $neutral-white;
+      border: 2px solid $neutral-sand;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px $ui-shadow-light;
+
+      &.selected {
+        background-color: $accent-yellow;
+        border-color: $accent-orange;
+      }
+
+      &.found {
+        background-color: $feedback-success;
+        color: $text-inverse;
+        border-color: $brand-primary-dark;
+      }
+    }
+  }
+
+  .word-list {
+    width: 100%;
+    max-width: 600px;
+    background-color: $bg-card;
+    border: 1px solid $neutral-divider;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px $ui-shadow-light;
+    margin-bottom: 2rem;
+
+    h3 {
+      @extend .h3;
+      color: $brand-primary;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      @extend .body-default;
+      color: $text-secondary;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+
+      li {
+        background: $neutral-sand;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: $font-body-default-size;
+        color: $text-primary;
+        transition: background 0.3s ease;
+
+        &.found {
+          background: $feedback-success;
+          color: $text-inverse;
+        }
+      }
+    }
+  }
+
+  @include respond(sm) {
+    padding: 1rem;
+
+    .word-grid {
+      .word-cell {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+      }
+    }
+
+    .word-list {
+      padding: 1rem;
+
+      ul {
+        gap: 0.5rem;
+
+        li {
+          padding: 0.4rem 0.8rem;
+          font-size: $font-body-small-size;
+        }
+      }
+    }
+  }
+}
+
+.found-images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: center;
+}
+
+.found-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 2px solid #547b82;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

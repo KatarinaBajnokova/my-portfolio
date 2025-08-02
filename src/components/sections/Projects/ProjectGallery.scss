@@ -1,0 +1,132 @@
+@use '@/styles/base/colors' as *;
+@use '@/styles/base/typography' as *;
+
+.projects-gallery {
+  text-align: center;
+  padding: 3rem 1rem 4rem 1rem;
+
+  h2 {
+    font-family: get-type(headline, font-family);
+    font-size: get-type(headline, font-size);
+    font-weight: get-type(headline, font-weight);
+    line-height: get-type(headline, line-height);
+    letter-spacing: get-type(headline, letter-spacing);
+    margin-bottom: 0.5rem;
+    color: get-color(text-dark);
+  }
+
+  p {
+    font-family: get-type(body, font-family);
+    font-size: get-type(body, font-size);
+    font-weight: get-type(body, font-weight);
+    line-height: get-type(body, line-height);
+    letter-spacing: get-type(body, letter-spacing);
+    margin-bottom: 2rem;
+    color: get-color(text-ink);
+  }
+}
+
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  &.single-center {
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.project-card {
+  padding: 1rem;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  .project-media {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .tag {
+    margin-top: 1rem;
+    font-size: get-type(label, font-size);
+    font-weight: get-type(label, font-weight);
+    font-family: get-type(label, font-family);
+    line-height: get-type(label, line-height);
+    letter-spacing: get-type(label, letter-spacing);
+    color: get-color(text-label);
+  }
+}
+
+/* ✅ Featured project override (Koyekola) */
+.project-card.featured {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+
+  .project-media {
+    max-height: 1800px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .tag {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    color: get-color(text-dark);
+  }
+
+  h2 {
+    font-size: 4rem;
+    font-family: get-type(display, font-family);
+    font-weight: get-type(display, font-weight);
+    line-height: get-type(display, line-height);
+    letter-spacing: get-type(display, letter-spacing);
+    color: get-color(text-ink);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-family: get-type(body, font-family);
+    font-weight: get-type(body, font-weight);
+    line-height: 1.8;
+    color: get-color(text-dark);
+  }
+}
+
+/* ✅ Responsive adjustments for featured project */
+@media (max-width: 768px) {
+  .project-card.featured {
+    width: 100%;
+    padding: 3rem;
+
+    .project-media {
+      max-height: 800px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
