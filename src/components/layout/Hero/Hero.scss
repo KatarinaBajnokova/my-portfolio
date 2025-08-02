@@ -3,7 +3,11 @@
   display: flex;
   justify-content: center;
   padding: 6rem 1.5rem;
-  background: linear-gradient(180deg, $color-background 0%, $color-muted 100%);
+  background: linear-gradient(
+    180deg,
+    get-color(surface-default) 0%,
+    get-color(surface-muted) 100%
+  );
   overflow: hidden;
 }
 
@@ -13,10 +17,10 @@
   padding: 4px;
   background: linear-gradient(
     130deg,
-    $color-primary,
-    $color-highlight,
-    $color-secondary,
-    $color-primary
+    get-color(brand-primary),
+    get-color(brand-highlight),
+    get-color(brand-accent),
+    get-color(brand-primary)
   );
   background-size: 300% 300%;
   animation: border-glow 6s linear infinite;
@@ -38,9 +42,9 @@
 .hero-content {
   position: relative;
   z-index: 2;
-  background-color: rgba($color-muted, 0.95);
+  background-color: rgba(get-color(surface-muted), 0.95);
   border-radius: 1rem;
-  box-shadow: 0 4px 12px $color-shadow;
+  box-shadow: 0 4px 12px get-color(shadow-default);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -112,24 +116,24 @@
       }
 
       .hero-title {
-        font-family: $font-heading;
+        font-family: $font-family-heading;
         font-size: 2.5rem;
         font-weight: $font-weight-bold;
-        color: $color-text-dark;
+        color: get-color(text-dark);
 
         @media (min-width: 768px) {
           font-size: 3.5rem;
         }
 
         span {
-          color: $color-text-dark;
+          color: get-color(text-dark);
           opacity: 0;
           display: inline-block;
           animation: fadeInChar 0.5s forwards;
         }
 
         .highlighted-name {
-          color: $color-text-dark;
+          color: get-color(text-dark);
           margin-left: 0.3rem;
           font-weight: bold;
           animation-delay: 1s;
@@ -137,7 +141,7 @@
       }
 
       .hero-subtitle {
-        @include body-text;
+        @include apply-typography(body);
         margin-bottom: 1.5rem;
         padding-left: 3rem;
         white-space: pre-line;
