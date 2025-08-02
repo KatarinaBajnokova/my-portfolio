@@ -17,7 +17,8 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-       @use "@styles/base/colors" as *;
+        @use "@styles/tokens/typography-primitives" as *;
+        @use "@styles/base/colors" as *;
         @use "@styles/base/typography" as *;
         @use "@styles/base/mixins" as *;
         @use "@styles/base/spacing" as *;
