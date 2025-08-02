@@ -1,6 +1,6 @@
 .footer-wrapper {
   background-color: get-color(surface-muted);
-  padding: $spacing-xl $spacing-md;
+  padding: get-space(xl) get-space(md);
   text-align: center;
   color: get-color(text-dark);
   border-top: 1px solid get-color(border-default);
@@ -35,10 +35,10 @@
 }
 
 .footer-socials {
-  margin-top: $spacing-sm;
+  margin-top: get-space(sm);
 
   a {
-    margin-inline: $spacing-xs;
+    margin-inline: get-space(xs);
     color: get-color(text-dark);
     font-size: 1.5rem;
     transition: color 0.3s ease;
